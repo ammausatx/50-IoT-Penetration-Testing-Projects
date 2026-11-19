@@ -1,7 +1,7 @@
-# Project 18: Firmware SBOM Generation and Vulnerability Matching
+# Project 23: SPI Flash Acquisition and Firmware Analysis
 
 ## Objective
-Generate a software bill of materials for a lab firmware filesystem and review known vulnerabilities.
+Practice read-only firmware acquisition and analysis on a dedicated training board or supplied image.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,11 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Inventory package manifests and binaries
-2. generate an SBOM with a suitable scanner
-3. normalize component names and versions
-4. match advisories
-5. manually verify applicability and exploitability.
+1. Confirm board and voltage requirements
+2. use a protected read-only workflow or provided dump
+3. hash source and copy
+4. identify partitions
+5. analyze the copy and preserve provenance.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

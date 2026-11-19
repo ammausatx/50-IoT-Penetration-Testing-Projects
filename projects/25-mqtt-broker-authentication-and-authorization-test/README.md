@@ -1,7 +1,7 @@
-# Project 16: Firmware Architecture and Component Identification
+# Project 25: MQTT Broker Authentication and Authorization Test
 
 ## Objective
-Map the architecture and trust boundaries of a supplied lab firmware image.
+Assess broker identity lifecycle, credential policy, and least-privilege access.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,10 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Identify bootloader, kernel, root filesystem, init system, services, libraries, and update components
-2. record versions and provenance
-3. build a component diagram
-4. flag unsupported or obsolete elements.
+1. Create per-client identities
+2. verify anonymous access is disabled
+3. test valid and invalid authentication
+4. verify ACL boundaries
+5. rotate a test credential and inspect audit logs.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

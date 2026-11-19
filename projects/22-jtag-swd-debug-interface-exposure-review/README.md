@@ -1,7 +1,7 @@
-# Project 17: Firmware Secrets and Sensitive Data Review
+# Project 22: JTAG/SWD Debug Interface Exposure Review
 
 ## Objective
-Review authorized firmware for accidentally embedded credentials and sensitive configuration.
+Assess debug-interface policy on an owned development board using vendor documentation and safe checks.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,11 +19,10 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Search extracted text and configuration for credential-like patterns using synthetic samples
-2. manually validate context
-3. classify findings
-4. redact values
-5. recommend secret removal and rotation.
+1. Identify documented debug headers
+2. inspect lifecycle configuration and lock-state indicators
+3. compare production and development policy
+4. do not bypass protections or extract protected contents.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.
