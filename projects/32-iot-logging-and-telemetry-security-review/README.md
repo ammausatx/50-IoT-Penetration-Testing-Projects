@@ -1,7 +1,7 @@
-# Project 29: IoT Mobile Companion App Static Security Review
+# Project 32: IoT Logging and Telemetry Security Review
 
 ## Objective
-Perform static review of an authorized companion-app build for insecure storage and configuration.
+Evaluate whether device and broker telemetry supports detection without exposing sensitive data.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,10 +19,10 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Use a test APK/IPA supplied by its owner
-2. inspect permissions, exported components, embedded endpoints, logging, and local storage
-3. use synthetic credentials
-4. report only validated issues.
+1. Generate benign lab events
+2. inspect timestamps, identity, event fields, retention, and transport
+3. verify secrets and personal data are excluded
+4. define alertable security events.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

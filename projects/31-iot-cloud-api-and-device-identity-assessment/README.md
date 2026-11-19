@@ -1,7 +1,7 @@
-# Project 30: IoT Mobile App API Traffic and Authorization Review
+# Project 31: IoT Cloud API and Device Identity Assessment
 
 ## Objective
-Review companion-app API behavior using test accounts and a controlled backend.
+Assess identity, authorization, and lifecycle controls between simulated devices and a test cloud service.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,11 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Proxy only lab app traffic
-2. document endpoints and data types
-3. compare owner and limited test roles
-4. test object-level authorization with synthetic records
-5. redact tokens and personal data.
+1. Create synthetic device identities
+2. inspect enrollment and revocation workflows
+3. test least-privilege API roles
+4. verify device-specific authorization
+5. review key rotation and audit trails.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

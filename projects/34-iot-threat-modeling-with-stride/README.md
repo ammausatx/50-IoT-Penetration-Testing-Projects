@@ -1,7 +1,7 @@
-# Project 26: BLE Pairing and GATT Permissions Assessment
+# Project 34: IoT Threat Modeling with STRIDE
 
 ## Objective
-Review BLE pairing, bonding, and GATT attribute permissions on a lab peripheral.
+Model threats across device, network, mobile, and cloud trust boundaries.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,11 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Use an owned peripheral or simulator
-2. enumerate advertised services
-3. map characteristics to intended roles
-4. test read/write permissions using approved test identities
-5. inspect pairing and bonding behavior.
+1. Draw data flows
+2. identify assets and trust boundaries
+3. apply STRIDE to each component
+4. record abuse cases and mitigations
+5. prioritize risks and link them to verification tests.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.
