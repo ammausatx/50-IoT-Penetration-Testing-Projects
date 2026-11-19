@@ -1,7 +1,7 @@
-# Project 38: OTA Update Threat Modeling and Resilience Testing
+# Project 45: IoT Cloud-to-Device Command Authorization Assessment
 
 ## Objective
-Model OTA update threats and test safe failure handling in a simulator.
+Verify that cloud-originated commands are authenticated, scoped, and bound to the correct device.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,10 +19,10 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Map update actors and data flows
-2. identify threats to manifest, transport, signing, rollback, and availability
-3. simulate interrupted downloads and invalid metadata
-4. verify atomicity and recovery.
+1. Use a synthetic cloud backend and two test devices
+2. inspect command identity and authorization
+3. attempt cross-device commands using test roles
+4. verify replay protections and audit trails.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

@@ -1,7 +1,7 @@
-# Project 39: Hardware Attack Surface Assessment
+# Project 44: IoT Botnet Exposure and Defensive Configuration Review
 
 ## Objective
-Create a safe, read-only inventory of accessible hardware interfaces on owned development equipment.
+Assess whether lab devices exhibit common misconfigurations associated with botnet recruitment, without deploying malware.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,11 +19,10 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Review board schematics and vendor docs
-2. photograph accessible interfaces
-3. identify UART, JTAG/SWD, SPI, I2C, and USB test points
-4. assess production lock policy
-5. avoid probing unknown or energized circuitry.
+1. Review exposed management services, default credentials, patch state, egress policy, and logging
+2. inspect synthetic indicators in sample logs
+3. verify hardening and containment
+4. do not execute botnet code.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

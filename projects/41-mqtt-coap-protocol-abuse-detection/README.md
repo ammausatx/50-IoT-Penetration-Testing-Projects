@@ -1,7 +1,7 @@
-# Project 40: IoT Protocol Fuzzing in a Simulator
+# Project 41: MQTT/CoAP Protocol Abuse Detection
 
 ## Objective
-Use bounded, non-destructive input mutation to assess parser robustness in a protocol simulator.
+Build detections for unauthorized or malformed messaging patterns using synthetic traffic.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,12 +19,11 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Select a local simulator and documented message schema
-2. define strict rate and size limits
-3. mutate synthetic messages
-4. monitor crashes and logs
-5. stop on instability
-6. preserve seeds and reproduce only in the isolated environment.
+1. Define baseline topics and resources
+2. generate harmless denied-access and malformed-but-bounded test events in a simulator
+3. capture broker/server logs
+4. create detection rules
+5. measure alert quality.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

@@ -1,7 +1,7 @@
-# Project 36: Advanced Firmware Static Analysis and Hardening Review
+# Project 42: IoT Identity, PKI, and Certificate Lifecycle Assessment
 
 ## Objective
-Conduct a deeper static review of a supplied firmware image and evaluate hardening controls.
+Review device identity provisioning, certificate trust, rotation, and revocation.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,11 +19,11 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Map executable formats and linked libraries
-2. inspect service startup and filesystem permissions
-3. review compiler hardening indicators where available
-4. identify debug artifacts and unnecessary components
-5. verify findings manually.
+1. Create synthetic device certificates from a lab CA
+2. inspect identity binding and EKU
+3. test expiry and revocation handling
+4. verify rotation workflow
+5. ensure private keys remain protected.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.
