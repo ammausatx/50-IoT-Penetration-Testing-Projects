@@ -1,7 +1,7 @@
-# Project 21: UART Console Security Review on Owned Hardware
+# Project 29: IoT Mobile Companion App Static Security Review
 
 ## Objective
-Review UART debug-console exposure on owned development hardware without changing device state.
+Perform static review of an authorized companion-app build for insecure storage and configuration.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,10 +19,10 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Use board documentation to identify test pads
-2. connect with correct voltage and ground
-3. observe boot output using read-only serial settings
-4. document exposed data and authentication controls.
+1. Use a test APK/IPA supplied by its owner
+2. inspect permissions, exported components, embedded endpoints, logging, and local storage
+3. use synthetic credentials
+4. report only validated issues.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

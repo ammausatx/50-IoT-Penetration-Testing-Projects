@@ -1,7 +1,7 @@
-# Project 24: MQTT TLS and Certificate Validation
+# Project 26: BLE Pairing and GATT Permissions Assessment
 
 ## Objective
-Validate encrypted MQTT transport and certificate verification in a lab broker/client pair.
+Review BLE pairing, bonding, and GATT attribute permissions on a lab peripheral.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,10 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Configure a lab CA and broker certificate
-2. connect a synthetic client with trusted CA validation
-3. test hostname mismatch and untrusted certificate rejection
-4. inspect negotiated TLS settings.
+1. Use an owned peripheral or simulator
+2. enumerate advertised services
+3. map characteristics to intended roles
+4. test read/write permissions using approved test identities
+5. inspect pairing and bonding behavior.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.

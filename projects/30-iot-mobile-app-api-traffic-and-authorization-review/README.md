@@ -1,7 +1,7 @@
-# Project 22: JTAG/SWD Debug Interface Exposure Review
+# Project 30: IoT Mobile App API Traffic and Authorization Review
 
 ## Objective
-Assess debug-interface policy on an owned development board using vendor documentation and safe checks.
+Review companion-app API behavior using test accounts and a controlled backend.
 
 ## Authorization and safety
 Use only owned devices, vendor-provided samples, simulators, or systems explicitly authorized in writing. Keep testing inside an isolated lab. Do not target public services, real users, safety-critical/medical/vehicle systems, or production infrastructure. Avoid destructive writes, credential harvesting, stealth, persistence, and high-volume traffic.
@@ -19,10 +19,11 @@ Use only owned devices, vendor-provided samples, simulators, or systems explicit
 4. Verify the exact target is in scope before each test.
 
 ## Procedure
-1. Identify documented debug headers
-2. inspect lifecycle configuration and lock-state indicators
-3. compare production and development policy
-4. do not bypass protections or extract protected contents.
+1. Proxy only lab app traffic
+2. document endpoints and data types
+3. compare owner and limited test roles
+4. test object-level authorization with synthetic records
+5. redact tokens and personal data.
 
 ## Tools and technique
 Use vendor documentation and appropriate defensive tooling for the protocol or artifact. Examples may include Wireshark/tshark, Mosquitto utilities, BlueZ, firmware identification/extraction tools, SBOM generators, mobile static-analysis tools, and lab API proxies. Select read-only or simulator modes where possible; review tool options and constrain all traffic to approved lab targets.
