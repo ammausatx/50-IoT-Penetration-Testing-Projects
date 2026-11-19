@@ -1,7 +1,7 @@
-# Project 42: IoT Identity, PKI, and Certificate Lifecycle Assessment
+# Project 49: IoT Incident Response Tabletop
 
 ## Objective
-Review device identity provisioning, certificate trust, rotation, and revocation.
+Run an end-to-end tabletop exercise for a simulated IoT compromise scenario.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,11 +19,10 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Create synthetic device certificates from a lab CA
-2. inspect identity binding and EKU
-3. test expiry and revocation handling
-4. verify rotation workflow
-5. ensure private keys remain protected.
+1. Define a fictional incident and roles
+2. inject synthetic alerts
+3. practice triage, containment, evidence preservation, vendor escalation, recovery, and communications
+4. capture decisions and improvement actions.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

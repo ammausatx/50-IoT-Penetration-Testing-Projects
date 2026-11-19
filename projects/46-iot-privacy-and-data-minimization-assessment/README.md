@@ -1,7 +1,7 @@
-# Project 44: IoT Botnet Exposure and Defensive Configuration Review
+# Project 46: IoT Privacy and Data Minimization Assessment
 
 ## Objective
-Assess whether lab devices exhibit common misconfigurations associated with botnet recruitment, without deploying malware.
+Review telemetry and device data flows for privacy risks and unnecessary collection.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,10 +19,11 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Review exposed management services, default credentials, patch state, egress policy, and logging
-2. inspect synthetic indicators in sample logs
-3. verify hardening and containment
-4. do not execute botnet code.
+1. Map data elements and destinations
+2. use synthetic records
+3. inspect local and cloud retention settings
+4. verify consent and deletion flows in the simulator
+5. recommend minimization, redaction, and retention limits.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

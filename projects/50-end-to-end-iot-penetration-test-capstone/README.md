@@ -1,7 +1,7 @@
-# Project 45: IoT Cloud-to-Device Command Authorization Assessment
+# Project 50: End-to-End IoT Penetration Test Capstone
 
 ## Objective
-Verify that cloud-originated commands are authenticated, scoped, and bound to the correct device.
+Conduct a complete authorized assessment of a contained IoT training environment.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,10 +19,11 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Use a synthetic cloud backend and two test devices
-2. inspect command identity and authorization
-3. attempt cross-device commands using test roles
-4. verify replay protections and audit trails.
+1. Define scope and rules of engagement
+2. inventory assets
+3. assess network, web, firmware, wireless/protocol, identity, and cloud surfaces
+4. validate selected findings safely
+5. report risk and retest remediation.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.

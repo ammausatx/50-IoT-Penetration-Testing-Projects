@@ -1,7 +1,7 @@
-# Project 43: IoT Zero Trust and Microsegmentation Architecture
+# Project 47: Industrial IoT Security Architecture Review
 
 ## Objective
-Design and validate identity-aware access boundaries for a simulated IoT fleet.
+Review a simulated industrial IoT architecture without interacting with live operational technology.
 
 ## Authorization and safety boundaries
 This advanced exercise is restricted to owned devices, supplied firmware, synthetic services, or explicitly authorized isolated training environments. Industrial control, medical, automotive, public infrastructure, and other safety-critical systems must remain simulated; never test live operational technology. Do not deploy malware, persistence, botnet code, destructive firmware changes, credential theft, or denial-of-service activity.
@@ -19,11 +19,11 @@ This advanced exercise is restricted to owned devices, supplied firmware, synthe
 4. Establish rate limits, safety checks, and a rollback plan.
 
 ## Procedure
-1. Inventory device roles and flows
-2. define policy per identity and service
-3. implement lab VLAN/firewall or policy controls
-4. test allowed and denied paths
-5. document policy drift and monitoring.
+1. Use a diagram or digital-twin environment
+2. map zones and conduits
+3. identify remote access and safety boundaries
+4. assess monitoring, identity, backups, and change control
+5. propose compensating controls.
 
 ## Tooling guidance
 Prefer vendor-supported analysis tools, static analysis, protocol analyzers, simulators, and defensive monitoring. Any active test must be bounded, non-destructive, and confined to the lab. Review tool documentation and record exact versions and relevant configuration.
